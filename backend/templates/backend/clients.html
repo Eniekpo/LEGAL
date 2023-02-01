@@ -1,0 +1,42 @@
+{% extends 'backend/base.html' %} {% block content %}
+<div class="min-h-screen bg-white flex flex-col">
+  <div class="mb-5 text-2xl text-center">
+    <h1 class="text-3 mt-12 ml-12">Details of Registered Clients</h1>
+  </div>
+
+  <table
+    class="table-auto border-collapse border border-slate-500 p-2 text-left ml-3 mr-3"
+  >
+    <thead>
+      <tr>
+        <th class="border border-slate-900 p-2">FirstName</th>
+        <th class="border border-slate-900 p-2">LastName</th>
+        <th class="border border-slate-900 p-2">Gender</th>
+        <th class="border border-slate-900 p-2">City</th>
+        <th class="border border-slate-900 p-2">State</th>
+        <th class="border border-slate-900 p-2">Case Type</th>
+        <th class="border border-slate-900 p-2">Lawyer</th>
+        <th class="border border-slate-900 p-2">Email</th>
+        <th class="border border-slate-900 p-2">Phone</th>
+        <th class="border border-slate-900 p-2">Profile</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for client in clients %}
+      <tr>
+        <td class="border border-slate-700 p-2">{{client.FirstName}}</td>
+        <td class="border border-slate-700 p-2">{{client.LastName}}</td>
+        <td class="border border-slate-700 p-2">{{client.Gender}}</td>
+        <td class="border border-slate-700 p-2">{{client.City}}</td>
+        <td class="border border-slate-700 p-2">{{client.State}}</td>
+        <td class="border border-slate-700 p-2">{{client.Case_Category}}</td>
+        <td class="border border-slate-700 p-2">{{client.Lawyer}}</td>
+        <td class="border border-slate-700 p-2">{{client.Email}}</td>
+        <td class="border border-slate-700 p-2">{{client.Phone}}</td>
+        <td class="border border-slate-700 p-2">{{client.img.url}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock content %}
