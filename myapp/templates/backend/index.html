@@ -1,0 +1,27 @@
+{% extends 'myapp/base.html' %} {% load static %} {% block content %}
+<div class="min-h-screen bg-blue-100 flex flex-col justify-center">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <img
+      class="mx-auto h-20 w-auto"
+      src="{% static 'images/law.png'%}"
+      alt="Legal-Match"
+    />
+    <h2 class="mt-6 text-center text-2xl font-extrabold text-gray-700">
+      SEARCH FOR A LAWYER
+    </h2>
+    <p class="mt-2 text-center text-sm text-gray-600 max-w">
+      Already registered?
+      <a
+        href="#"
+        class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 px-5"
+        >Contact Your Lawyer</a
+      >
+    </p>
+  </div>
+
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="bg-white py-8 px-6 shadow rounded-lg sm:px-10"></div>
+  </div>
+</div>
+
+{% endblock content %}

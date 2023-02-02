@@ -1,0 +1,89 @@
+textarea{% extends 'myapp/base.html' %} {% load static %} {% block content %}
+<div class="min-h-screen bg-blue-100 flex flex-col justify-center">
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="bg-white py-8 px-6 shadow rounded-lg sm:px-10">
+      <form class="mb-0 space-y-6" action="#" method="POST">
+        {% csrf_token %}
+
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700"
+            >Full Name</label
+          >
+          <div class="mt-1">
+            <input
+              type="text"
+              required
+              class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700"
+            >Email address</label
+          >
+          <div class="mt-1">
+            <input
+              type="email"
+              required
+              class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="password" class="block text-sm font-medium"
+            >Password</label
+          >
+          <div class="mt-1">
+            <input
+              type="password"
+              required
+              class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label
+            for="case category"
+            class="block text-sm font-medium text-gray-700"
+            >Case Category</label
+          >
+          <div class="mt-1">
+            <select
+              class="w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            >
+              <option value="">Please select Case Type</option>
+              <option value="small">1 to 10 employees</option>
+              <option value="medium">11 to 50 employees</option>
+              <option value="large">50+ employees</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="description" class="block text-sm font-medium"
+            >Describe Your Case Briefly</label
+          >
+          <div class="mt-1">
+            <textarea
+              id="description"
+              class="p-3 ring-2 focus:ring-none"
+            ></textarea>
+          </div>
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            Register Your Case
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}
