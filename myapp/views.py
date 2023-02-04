@@ -8,6 +8,10 @@ from django.contrib import messages
 
 
 def index(request):
+    return render(request, 'myapp/index.html')
+
+
+def register(request):
     form = RegisterForm(request.POST or None)
     if form.is_valid():
         form.save()
@@ -17,15 +21,11 @@ def index(request):
         "form": form
     }
 
-    return render(request, 'myapp/index.html', context)
+    return render(request, 'myapp/register.html', context)
 
 
-def lawyers_reg(request):
-    return render(request, 'myapp/lawyers_reg.html')
-
-
-def clients_reg(request):
-    return render(request, 'myapp/clients_reg.html')
+def login(request):
+    return render(request, 'myapp/login.html')
 
 
 def lawyers(request):
