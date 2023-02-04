@@ -50,3 +50,18 @@ class Client(models.Model):
 
     def __str__(self):
         return str(self.FirstName)
+
+
+class Register(models.Model):
+    firstname = models.CharField(max_length=100)
+    lastname = models.CharField(max_length=100)
+    email = models.EmailField(max_length=200)
+    gender = models.CharField(max_length=5)
+    city = models.CharField(max_length=30)
+    state = models.CharField(max_length=20)
+    phone = models.CharField(max_length=15)
+    description = models.TextField()
+    reg_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.firstname)

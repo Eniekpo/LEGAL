@@ -1,11 +1,23 @@
 from django.shortcuts import render
 from . models import Lawyer, Client
+from . forms import RegisterForm
+from django.http import HttpResponseRedirect
+from django.contrib import messages
 
 # Create your views here.
 
 
 def index(request):
-    return render(request, 'myapp/index.html')
+    form = RegisterForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        messages.success(request, "Registration successfully")
+        return HttpResponseRedirect('/')
+    context = {
+        "form": form
+    }
+
+    return render(request, 'myapp/index.html', context)
 
 
 def lawyers_reg(request):
