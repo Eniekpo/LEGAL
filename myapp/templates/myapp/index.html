@@ -1,7 +1,15 @@
 {% extends 'myapp/base.html' %} 
 {% load static %} 
 {% block content %}
-<div class="container mt-3" style="width: 95%; font-size: 16px; font-weight: bold">
- <h1 class="mt-5 p-5">LEGAL MATCH</h1>
+<div class="container mx-4 my-4">
+  <div class="row">
+    <div class="jumbotron">
+  <h1 class="display-4">LEGAL MATCH</h1>
+  <p class="lead">Register a Case</p>
+  <hr class="my-4">
+  <p>You will be matched automatically with a suitable lawyer</p>
+  <a class="btn btn-primary btn-lg" href="{% url 'register' %}" role="button">I Need a Lawyer</a>
+</div>
+  </div>
 </div>
 {% endblock content %} 
