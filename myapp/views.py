@@ -10,6 +10,9 @@ from django.contrib import messages
 def index(request):
     return render(request, 'myapp/index.html')
 
+def lawyer_reg(request):
+    return render(request, 'myapp/lawyer_reg.html')
+
 
 def register(request):
     form = RegisterForm(request.POST or None)

@@ -60,6 +60,7 @@ class Register(models.Model):
     city = models.CharField(max_length=30)
     state = models.CharField(max_length=20)
     phone = models.CharField(max_length=15)
+    category = models.CharField(max_length=40)
     description = models.TextField()
     reg_at = models.DateTimeField(auto_now_add=True)
 
