@@ -32,10 +32,10 @@ def login(request):
 
 
 def lawyers(request):
-    lawyers = Lawyer.objects.all()
-    return render(request, 'myapp/lawyers.html', {'lawyers': lawyers})
+    lawyer = Lawyer.objects.all()
+    return render(request, 'myapp/lawyers.html', {'lawyers': lawyer})
 
 
 def clients(request):
-    clients = Client.objects.all()
-    return render(request, 'myapp/clients.html', {'clients': clients})
+    client = Client.objects.all()
+    return render(request, 'myapp/clients.html', {'clients': client})

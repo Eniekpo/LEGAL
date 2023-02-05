@@ -8,7 +8,6 @@
  <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <th scope="col">Email</th>
@@ -17,10 +16,9 @@
   <tbody>
     {% for client in clients %}
     <tr>
-      <th scope="row">1</th>
       <td>{{client.firstname}}</td>
       <td>{{client.lastname}}</td>
-      <td>@{{client.email}}</td>
+      <td>{{client.email}}</td>
     </tr>
     <tr>
       {% endfor %}
