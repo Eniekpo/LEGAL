@@ -1,0 +1,29 @@
+{% extends 'legalapp/base.html' %} {% load static %} {% block content %}
+<div class="container">
+  <div class="row">
+
+    <div class="col-6">
+        <div class="box">
+        <h2 class="my-6">For Clients</h2>
+        <h4>Register a Case</h4>
+        <hr class="my-4" />
+        <p>You will be matched automatically with a suitable lawyer based on your case description</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'clients' %}" role="button">I Need a Lawyer</a>
+      </div>
+      </div>
+
+    <div class="col-6">
+        <div class="box">
+        <h2 class="my-6">For Lawyers</h2>
+        <h4>Register Your Firm</h4>
+        <hr class="my-4" />
+        <p>You will be matched automatically with suitable Clients based on your skills and Experience</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'lawyers' %}" role="button">I Need Clients</a>
+      </div>
+      </div>
+
+      </div>
+    </div>
+    {% endblock content %}
+  </div>
+</div>

@@ -12,6 +12,9 @@ def index(request):
 def login(request):
     return render(request, 'legalapp/login.html')
 
+def register(request):
+    return render(request, 'legalapp/register.html')
+
 
 def clients(request):
     form = ClientForm(request.POST or None)
