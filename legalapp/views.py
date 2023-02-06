@@ -15,13 +15,19 @@ def login(request):
 def register(request):
     return render(request, 'legalapp/register.html')
 
+def match(request):
+    return render(request, 'legalapp/match.html')
+
+def profile(request):
+    return render(request, 'legalapp/profile.html')
+
 
 def clients(request):
     form = ClientForm(request.POST or None)
     if form.is_valid():
         form.save()
-        messages.success(request, "Registration successfully")
-        return HttpResponseRedirect('/')
+        messages.success(request, "You Have Been Matched Successfully !")
+        return HttpResponseRedirect('/match')
     context = {
         "form": form
     }

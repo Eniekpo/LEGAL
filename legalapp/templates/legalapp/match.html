@@ -1,0 +1,16 @@
+{% extends 'legalapp/base.html' %} {% load static %} {% block content %}
+<section class="vh-100" style="background-color: #ffffff">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-6">
+        <div class="box">
+        <h2 class="my-6">You have matched with a suitable lawyer based on your case description</h2>
+        <hr class="my-4" />
+        <p>Please Contact your Lawyer by clicking on the link below</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'profile' %}" role="button">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
