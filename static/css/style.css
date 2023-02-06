@@ -1,5 +1,9 @@
+html,
 body {
-  margin-top: 40px;
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
 }
 body::before {
   color: red;
@@ -14,6 +18,14 @@ body::before {
   border: 1px solid blue !important;
   min-height: 50px;
   font-size: 2rem !important;
+}
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+#footer,
+.push {
+  height: 50px;
 }
 
 /* @media (min-width: 576px) {
