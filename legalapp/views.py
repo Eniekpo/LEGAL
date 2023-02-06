@@ -9,6 +9,9 @@ from django.contrib import messages
 def index(request):
     return render(request, 'legalapp/index.html')
 
+def login(request):
+    return render(request, 'legalapp/login.html')
+
 
 def clients(request):
     form = ClientForm(request.POST or None)
