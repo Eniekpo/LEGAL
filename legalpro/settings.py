@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'jazzmin',
-    # 'django.contrib.admin',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PATHS = "bootstrap5"
