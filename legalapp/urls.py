@@ -6,7 +6,8 @@ urlpatterns = [
     path('clients', views.clients, name='clients'),
     path('lawyers', views.lawyers, name='lawyers'),
     path('login', views.login, name='login'),
-    path('register', views.register, name='register'),
     path('match', views.match, name='match'),
-    path('profile', views.profile, name='profile'),
+    path('lawyerprofile', views.lawyerprofile, name='lawyerprofile'),
+    path('lawyerdashboard', views.lawyerdashboard, name='lawyerdashboard'),
+    path('clientdashboard', views.clientdashboard, name='clientdashboard'),
 ]

@@ -12,14 +12,18 @@ def index(request):
 def login(request):
     return render(request, 'legalapp/login.html')
 
-def register(request):
-    return render(request, 'legalapp/register.html')
-
 def match(request):
     return render(request, 'legalapp/match.html')
 
-def profile(request):
-    return render(request, 'legalapp/profile.html')
+
+def lawyerprofile(request):
+    return render(request, 'legalapp/lawyerprofile.html')
+
+def lawyerdashboard(request):
+    return render(request, 'legalapp/lawyerdashboard.html')
+
+def clientdashboard(request):
+    return render(request, 'legalapp/clientdashboard.html')
 
 
 def clients(request):
