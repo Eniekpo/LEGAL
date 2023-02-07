@@ -9,8 +9,10 @@ from django.contrib import messages
 def index(request):
     return render(request, 'legalapp/index.html')
 
+
 def login(request):
     return render(request, 'legalapp/login.html')
+
 
 def match(request):
     return render(request, 'legalapp/match.html')
@@ -19,8 +21,10 @@ def match(request):
 def lawyerprofile(request):
     return render(request, 'legalapp/lawyerprofile.html')
 
+
 def lawyerdashboard(request):
     return render(request, 'legalapp/lawyerdashboard.html')
+
 
 def clientdashboard(request):
     return render(request, 'legalapp/clientdashboard.html')
