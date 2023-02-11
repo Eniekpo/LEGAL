@@ -1,33 +1,36 @@
-{% extends 'legalapp/base.html' %} {% load static %} {% block content %}
-<section class="vh-100" style="background-color: #ffffff">
-  <div class="container py-2 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-6">
-        <div class="card" style="width: 45rem">
-          <img src="{% static 'images/court.png' %}" class="card-img-top" alt="Banner"/>
-          <div class="card-body">
-            {% comment %} <div class="jumbotron"> {% endcomment %}
-              <h2 class="">LEGAL MATCH</h2>
-              <h4 class="">Register a Case</h4>
-              <hr class="my-4" style="background:#ff8c00; height:4px;"/>
-              
-              <div class="row">
-                <div class="col-6">
-                   <p>You will be matched automatically with a suitable Lawyer</p>
-                   <a class="btn btn-primary btn-lg" href="{% url 'clients' %}" role="button">I Need a Lawyer</a>
-                </div>
-                <div class="col-6">
-                   <p>You will be matched automatically with Client according to profile</p>
-                   <a class="btn btn-primary btn-lg" href="{% url 'lawyers' %}" role="button">I Need Clients</a>
-                </div>
-              {% comment %} </div> {% endcomment %}
-            </div>
+{% extends 'legalapp/base.html' %} 
+{% load static %} 
+{% block content %}
+<section class="vh-100" style="background-color: #eee;">
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-md-12 col-xl-4">
 
+        <div class="card" style="border-radius:5px; width:600px; height:500px;">
+          <div class="card-body text-center">
+             <h3 class="mb-2">LEGAL MATCH</h3>
+            <div class="mt-4 mb-2">
+              <img src="{% static 'images/scale.png' %}" class="rounded-circle img-fluid" style="width: 150px;" />
+            </div>
+            <h4 class="text-muted mb-4">Need a Lawyer or Client ?</h4>
+           
+            <p class="card-text"><a href="{% url 'login' %}" class="btn btn-primary btn-rounded">Get Started</a></p> 
+            <div class="d-flex justify-content-between text-center mt-2 mb-2">
+              <div class="p-3">
+                <p class="mb-2 h5">CLIENTS</p>
+                 <p class="card-text">Don't have an account?  <a href="{% url 'clients' %}" class="btn btn-primary btn-rounded btn-sm mt-2">Register Here</a></p> 
+              </div>
+             
+              <div class="p-3">
+                <p class="mb-2 h5">LAWYERS</p>
+                 <p class="card-text">Don't have an account?  <a href="{% url 'clients' %}" class="btn btn-primary btn-rounded btn-sm mt-2">Register Here</a></p> 
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 </section>
-
 {% endblock content %}
