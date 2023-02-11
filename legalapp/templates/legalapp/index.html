@@ -2,11 +2,10 @@
 {% load static %} 
 {% block content %}
 <section class="vh-100" style="background-color: #eee;">
-  <div class="container">
+  <div class="container"> 
     <div class="row d-flex justify-content-center align-items-center">
-      <div class="col-md-12 col-xl-4">
 
-        <div class="card" style="border-radius:5px; width:600px; height:500px;">
+        <div class="card mt-3" style="border-radius: 15px; width:600px; height:500px;">
           <div class="card-body text-center">
              <h3 class="mb-2">LEGAL MATCH</h3>
             <div class="mt-4 mb-2">
@@ -14,7 +13,7 @@
             </div>
             <h4 class="text-muted mb-4">Need a Lawyer or Client ?</h4>
            
-            <p class="card-text"><a href="{% url 'login' %}" class="btn btn-primary btn-rounded">Get Started</a></p> 
+            <p class="card-text"><a href="{% url 'login' %}" class="btn btn-secondary btn-rounded">Get Started</a></p> 
             <div class="d-flex justify-content-between text-center mt-2 mb-2">
               <div class="p-3">
                 <p class="mb-2 h5">CLIENTS</p>
@@ -27,10 +26,10 @@
               </div>
             </div>
           </div>
-        </div>
 
       </div>
     </div>
   </div>
 </section>
+
 {% endblock content %}
