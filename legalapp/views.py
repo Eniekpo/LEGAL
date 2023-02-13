@@ -26,6 +26,10 @@ def lawyerdashboard(request):
     return render(request, 'legalapp/lawyerdashboard.html')
 
 
+def clientdashboard(request):
+    return render(request, 'legalapp/clientdashboard.html')
+
+
 def clientprofile(request):
     return render(request, 'legalapp/clientprofile.html')
 
