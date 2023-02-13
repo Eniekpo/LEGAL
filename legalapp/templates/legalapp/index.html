@@ -5,7 +5,7 @@
   <div class="container"> 
     <div class="row d-flex justify-content-center align-items-center">
 
-        <div class="card mt-3" style="border-radius: 15px; width:600px; height:500px;">
+        <div class="card mt-3" style="border-radius: 15px;">
           <div class="card-body text-center">
              <h3 class="mb-2">LEGAL MATCH</h3>
             <div class="mt-4 mb-2">
@@ -13,17 +13,23 @@
             </div>
             <h4 class="text-muted mb-4">Need a Lawyer or Client ?</h4>
            
-            <p class="card-text"><a href="{% url 'login' %}" class="btn btn-secondary btn-rounded">Get Started</a></p> 
-            <div class="d-flex justify-content-between text-center mt-2 mb-2">
-              <div class="p-3">
+            <p class="card-text">
+              <a href="{% url 'login' %}" class="btn btn-secondary btn-rounded">Get Started</a>
+            </p> 
+            <div class="row">
+
+              <div class="col-6 mt-6">
                 <p class="mb-2 h5">CLIENTS</p>
-                 <p class="card-text">Don't have an account?  <a href="{% url 'clients' %}" class="btn btn-primary btn-rounded btn-sm mt-2">Register Here</a></p> 
+                 <p>Don't have an account? </p> 
+                 <a href="{% url 'clients' %}" class="btn btn-primary btn-rounded btn-sm">Register Here</a>
               </div>
              
-              <div class="p-3">
+              <div class="col-6 mt-6">
                 <p class="mb-2 h5">LAWYERS</p>
-                 <p class="card-text">Don't have an account?  <a href="{% url 'clients' %}" class="btn btn-primary btn-rounded btn-sm mt-2">Register Here</a></p> 
+                 <p>Don't have an account? </p> 
+                <a href="{% url 'clients' %}" class="btn btn-primary btn-rounded btn-sm">Register Here</a>
               </div>
+
             </div>
           </div>
 
