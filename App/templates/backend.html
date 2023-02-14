@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- Block title -->
+{% block title %} Backend {% endblock %}
+
+<!-- Logout button -->
+{% block nav-btn %}
+<a href="{% url 'logout' %}" class="btn btn-sm text-light" id="btn-nav">Frontend</a>
+{% endblock %}
+
+<!-- Block footer -->
+{% block footer %} style="color: #ff7f7f;" {% endblock %}
+
+<!-- Block navbar content -->
+{% block nav-content %}
+<i class="fa-solid fa-unlock-keyhole"></i>&nbsp;&nbsp; Admin Panel
+{% endblock %}
+
+<!-- Page content -->
+{% block content %} 
+{% comment %} <h1 class="text-danger text-center" style="position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%);">Backend</h1> {% endcomment %}
+<div class="cotainer">
+    <div class="row text-center justify-items-center mt-5 pt-5">
+
+        <div class="col-4">
+           <h1> Lawyers Pannel</h1>
+        <a href="{% url 'lawyerprofile' %}">
+            <img src="{% static 'img/lawyer.png'  %}" alt="Lawyer" class="img-responsive" />
+        </a>
+        </div>  
+
+        <div class="col-4">
+           <h1> Clients Pannel </h1>
+        <a href="{% url 'clientprofile' %}">
+            <img src="{% static 'img/client.png'  %}" alt="Lawyer" class="img-responsive" />
+        </a>
+        </div>  
+
+        <div class="col-4">
+        <h1> Cases Panel</h1>
+         <a href="{% url 'cases' %}">
+            <img src="{% static 'img/cases.png'  %}" alt="Lawyer" class="img-responsive" />
+        </a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

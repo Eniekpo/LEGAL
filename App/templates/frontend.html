@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+ {% load static %}
+
+<!-- Page content -->
+{% block content %} 
+<section class="vh-100" style="background-color: #eee;">
+  <div class="container"> 
+    <div class="row d-flex justify-content-center align-items-center">
+
+        <div class="card mt-3" style="border-radius: 15px;">
+          <div class="card-body text-center">
+             <h3 class="mb-2">LEGAL MATCH</h3>
+            <div class="mt-4 mb-2">
+              <img src="{% static 'images/scale.png' %}" class="rounded-circle img-fluid" style="width: 150px;" />
+            </div>
+            <h4 class="text-muted mb-4">Need a Lawyer or Client ?</h4>
+           
+            <p class="card-text">
+              <a href="{% url 'login' %}" class="btn btn-secondary btn-rounded">Get Started</a>
+            </p> 
+            <div class="row">
+
+              <div class="col-6 mt-6">
+                <p class="mb-2 h5">CLIENTS</p>
+                 <p>Don't have an account? </p> 
+                 <a href="{% url 'clients' %}" class="btn btn-primary btn-rounded btn-sm">Register Here</a>
+              </div>
+             
+              <div class="col-6 mt-6">
+                <p class="mb-2 h5">LAWYERS</p>
+                 <p>Don't have an account? </p> 
+                <a href="{% url 'lawyers' %}" class="btn btn-primary btn-rounded btn-sm">Register Here</a>
+              </div>
+
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
