@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.cache import cache_control
 
 from . forms import ClientForm, LawyerForm
+from .models import Cases, Lawyer, Client
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 
@@ -28,7 +29,7 @@ def clients(request):
     if form.is_valid():
         form.save()
         messages.success(request, "You Have Been Matched Successfully !")
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect('/match')
     context = {
         "form": form
     }
@@ -50,16 +51,27 @@ def lawyers(request):
 
 
 def lawyerprofile(request):
-    return render(request, "App/lawyerprofile.html")
+    lawyers = Lawyer.objects.all()
+    return render(request, "App/lawyerprofile.html", {'lawyers': lawyers})
 
 
 def clientprofile(request):
-    return render(request, "App/clientprofile.html")
+    clients = Client.objects.all()
+    return render(request, "App/clientprofile.html", {'clients': clients})
 
 
 def cases(request):
-    return render(request, "App/cases.html")
+    cases = Cases.objects.all()
+    return render(request, "App/cases.html", {'cases': cases})
 
 
 def match(request):
     return render(request, "App/match.html")
+
+
+def lawyerdashboard(request):
+    return render(request, "App/lawyerdashboard.html")
+
+
+def clientdashboard(request):
+    return render(request, "App/clientdashboard.html")

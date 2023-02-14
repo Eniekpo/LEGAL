@@ -28,15 +28,5 @@
     {{form.description|as_crispy_field}}
     <button type="submit" class="btn btn-outline-primary mt-3 mb-2" style="width: 90px">Submit</button>
   </form>
-
-  {% comment %} Message from Backend {% endcomment %}
-  {% comment %} {% for message in messages %}
-    {% if message.tags == 'success' %}
-    <div class="alert alert-primary alert-dismissible fade show" role="alert">
-      {{ message}}
-      <a href = "{% url 'App/matc' %}" type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="Close"></a>
-    </div>
-    {% endif %}
-  {% endfor %} {% endcomment %}
 </div>
 {% endblock content %}

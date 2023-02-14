@@ -5,9 +5,9 @@
 
 <!-- Logout button -->
 {% block nav-btn %}
-<a href="{% url 'logout' %}" class="btn btn-sm text-light" id="btn-nav">LOG OUT</a>
-<a href="{% url 'clientprofile' %}" class="btn btn-sm text-light" id="btn-nav">CLIENTS</a>
-<a href="{% url 'lawyerprofile' %}" class="btn btn-sm text-light" id="btn-nav">LAWYERS</a>
+<a href="{% url 'logout' %}" class="btn btn-sm text-light" id="btn-nav">Frontend</a>
+<a href="{% url 'clientdashboard' %}" class="btn btn-sm text-light" id="btn-nav">CLIENTS</a>
+<a href="{% url 'lawyerdashboard' %}" class="btn btn-sm text-light" id="btn-nav">LAWYERS</a>
 {% endblock %}
 
 <!-- Block footer -->
@@ -15,15 +15,15 @@
 
 <!-- Block navbar content -->
 {% block nav-content %}
-<i class="fa-solid fa-unlock-keyhole"></i>&nbsp;&nbsp; Admininstration
+<i class="fa-solid fa-unlock-keyhole"></i>&nbsp;&nbsp; Cases Dashboard
 {% endblock %}
 
 <!-- Page content -->
 {% block content %} 
-<div class="cotainer">
+<div class="cotainer m-5">
     <div class="row">
         <div class="col-12">
-            <table class="table m-5">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Case ID</th>
@@ -34,13 +34,15 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for case in cases %}
                     <tr>
-                        <td>CAS 001</td>
-                        <td>Child Custody</td>
-                        <td>Mr. John Oruebi</td>
-                        <td>Bar. Akpos Okada</td>
-                        <td>Completed</td>
+                        <td>{{case.case_id}}</td>
+                        <td>{{case.case_type}}</td>
+                        <td>{{case.client}}</td>
+                        <td>{{case.lawyer}}</td>
+                        <td>{{case.situation}}</td>
                     </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>

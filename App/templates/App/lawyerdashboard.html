@@ -1,12 +1,15 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %}
 <!-- Block title -->
 {% block title %} Backend {% endblock %}
 
 <!-- Logout button -->
 {% block nav-btn %}
-<a href="{% url 'logout' %}" class="btn btn-sm text-light" id="btn-nav">LOG OUT</a>
-<a href="{% url 'lawyerprofile' %}" class="btn btn-sm text-light" id="btn-nav">LAWYERS</a>
+<a href="{% url 'logout' %}" class="btn btn-sm text-light" id="btn-nav"
+  >Frontend</a
+>
+<a href="{% url 'clientdashboard' %}" class="btn btn-sm text-light" id="btn-nav"
+  >CLIENTS</a
+>
 <a href="{% url 'cases' %}" class="btn btn-sm text-light" id="btn-nav">CASES</a>
 {% endblock %}
 
@@ -15,11 +18,7 @@
 
 <!-- Block navbar content -->
 {% block nav-content %}
-<i class="fa-solid fa-unlock-keyhole"></i>&nbsp;&nbsp; Admininstration
-{% endblock %}
+<i class="fa-solid fa-unlock-keyhole"></i>&nbsp;&nbsp; Lawyers Dashboard {% endblock %}
 
 <!-- Page content -->
-{% block content %} 
-
-     
-{% endblock content %}
+{% block content %} {% endblock content %}
