@@ -51,13 +51,11 @@ def lawyers(request):
 
 
 def lawyerprofile(request):
-    lawyers = Lawyer.objects.all()
-    return render(request, "App/lawyerprofile.html", {'lawyers': lawyers})
+    return render(request, "App/lawyerprofile.html")
 
 
 def clientprofile(request):
-    clients = Client.objects.all()
-    return render(request, "App/clientprofile.html", {'clients': clients})
+    return render(request, "App/clientprofile.html")
 
 
 def cases(request):
@@ -70,8 +68,10 @@ def match(request):
 
 
 def lawyerdashboard(request):
-    return render(request, "App/lawyerdashboard.html")
+    lawyers = Lawyer.objects.all()
+    return render(request, "App/lawyerdashboard.html", {'lawyers': lawyers})
 
 
 def clientdashboard(request):
-    return render(request, "App/clientdashboard.html")
+    clients = Client.objects.all()
+    return render(request, "App/clientdashboard.html", {'clients': clients})
