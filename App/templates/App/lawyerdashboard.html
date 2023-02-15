@@ -21,4 +21,39 @@
 <i class="fa-solid fa-unlock-keyhole"></i>&nbsp;&nbsp; Lawyers Dashboard {% endblock %}
 
 <!-- Page content -->
-{% block content %} {% endblock content %}
+{% block content %} 
+<div class="cotainer m-5">
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Firm</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Lawyer Type</th>
+                        <th>City</th>
+                        <th>Staet</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for lawyer in lawyers %}
+                    <tr>
+                        <td>{{lawyer.Firm}}</td>
+                        <td>{{lawyer.FirstName}}</td>
+                        <td>{{lawyer.LastName}}</td>
+                        <td>{{lawyer.lawyer_type}}</td>
+                        <td>{{lawyer.City}}</td>
+                        <td>{{lawyer.State}}</td>
+                        <td>{{lawyer.Email}}</td>
+                        <td>{{lawyer.Phone}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock content %}
